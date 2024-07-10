@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+  height: 100vh;
+}
+
+#calc-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 40px;
+  border-radius: 12px;
+  width: 400px;
+  margin: auto;
+  background-color: rgb(56, 188, 221);
+}
+
+#calc-screen {
+  font-family: "Roboto Mono", monospace;
+  padding: 24px 16px;
+  font-size: 30px;
+  border-radius: 8px;
+  background-color: rgb(240, 248, 255);
+  color: rgb(0, 0, 0);
+  width: 100%;
+}
+
+#calc-btns {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(5, auto);
+  gap: 8px;
+}
+
+.btn {
+  width: 100px;
+  color: rgb(255, 255, 255);
+  padding: 15px 25px;
+  font-size: 30px;
+  border-radius: 8px;
+  border: none;
+  background-color: rgb(56, 122, 221);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
+}
+
+.opr {
+  background-color: rgb(47, 102, 185);
+}
