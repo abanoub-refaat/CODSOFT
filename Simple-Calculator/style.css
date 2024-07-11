@@ -8,57 +8,76 @@
   font-family: "Nunito", sans-serif;
 }
 
+html {
+  font-size: 175%;
+  font-weight: 300;
+  line-height: 1.3;
+}
+
 body {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: aliceblue;
+  background-image: linear-gradient(to bottom right, #fdfcfb, #e2d1c3);
   height: 100vh;
 }
 
-#calc-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  padding: 40px;
+.calc-body {
   border-radius: 12px;
-  width: 400px;
-  margin: auto;
-  background-color: rgb(56, 188, 221);
+  box-shadow: 0 0 40px 0px rgba(0, 0, 0, 0.15);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  max-width: 15em;
+  overflow: hidden;
 }
 
-#calc-screen {
+.calc-screen {
   font-family: "Roboto Mono", monospace;
-  padding: 24px 16px;
-  font-size: 30px;
-  border-radius: 8px;
-  background-color: rgb(240, 248, 255);
-  color: rgb(0, 0, 0);
-  width: 100%;
+  background-color: #222222;
+  color: #fff;
+  font-size: 1.714285714em;
+  padding: 0.5em 0.75em;
+  text-align: right;
 }
 
-#calc-btns {
+.calc-keys {
+  background-color: #999;
   display: grid;
-  grid-template-columns: repeat(3, auto);
-  grid-template-rows: repeat(5, auto);
-  gap: 8px;
+  grid-gap: 1px;
+  grid-template-columns: repeat(4, 1fr);
 }
 
-.btn {
-  width: 100px;
-  color: rgb(255, 255, 255);
-  padding: 15px 25px;
-  font-size: 30px;
-  border-radius: 8px;
+.calc-keys > * {
   border: none;
-  background-color: rgb(56, 122, 221);
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: #fff;
+  padding: 2.5em 3.25em;
+  position: relative;
+  text-align: center;
   cursor: pointer;
 }
 
-.opr {
-  background-color: rgb(47, 102, 185);
+.calc-keys > *:active::before,
+.calc-keys > .is-depressed::before {
+  background-color: rgba(0, 0, 0, 0.2);
+  bottom: 0;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5) inset;
+  content: "";
+  left: 0;
+  opacity: 0.3;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.key--operator {
+  background-color: #eee;
+}
+
+.key--equal {
+  background-image: linear-gradient(to bottom, #fe886a, #ff7033);
+  grid-column: -2;
+  grid-row: 2 / span 4;
 }
