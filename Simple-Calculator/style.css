@@ -29,7 +29,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-top: 2em;
-  max-width: 15em;
+  max-width: 14em;
   overflow: hidden;
 }
 
@@ -52,10 +52,11 @@ body {
 .calc-keys > * {
   border: none;
   background-color: #fff;
-  padding: 2.5em 3.25em;
+  padding: 1.5em 2.25em;
   position: relative;
   text-align: center;
   cursor: pointer;
+  font-size: large;
 }
 
 .calc-keys > *:active::before,
